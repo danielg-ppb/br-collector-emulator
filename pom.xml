@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.br.collector.emulator</groupId>
-	<artifactId>adapterdummy</artifactId>
+	<artifactId>collector-emulator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>adapterdummy</name>
-	<description>Dummy for BR Adapter</description>
+	<name>collector-emulator</name>
+	<description>BR Collector Emulator</description>
 	<url/>
 	<licenses>
 		<license/>
