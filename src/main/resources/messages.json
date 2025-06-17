@@ -1,0 +1,264 @@
+[
+  {
+    "metadata": {
+      "correlationId": "sr:match:6037403222",
+      "provider": "BETRADAR"
+    },
+    "oddChange": {
+      "eventId": "sr:match:6037403222",
+      "product": "3",
+      "timestamp": "2025-05-06T14:10:00Z",
+      "status": {
+        "status": "NotStarted",
+        "matchStatus": "0"
+      },
+      "odds": {
+        "markets": [
+          {
+            "id": "186",
+            "specifiers": "{}",
+            "favourite": "false",
+            "status": "1",
+            "outcome": [
+              {
+                "id": "4",
+                "odds": "4.9",
+                "active": "true",
+                "probability": 0.153497
+              },
+              {
+                "id": "5",
+                "odds": "1.13",
+                "active": "true",
+                "probability": 0.846494
+              }
+            ]
+          }
+        ]
+      },
+      "matchSummary": {
+        "id": "sr:match:6037403222",
+        "homeCompetitor": {
+          "competitor": {
+            "id": "sr:competitor:54477",
+            "name": "Leite, Wilson",
+            "references": {
+              "betradarId": "5779526",
+              "aamsId": "54477",
+              "references": {
+                "betradar": "5779526",
+                "aams": "54477"
+              }
+            },
+            "countryCode": "BRA",
+            "country": "Brazil",
+            "abbreviation": "LEI",
+            "gender": "male",
+            "category": {
+              "id": "sr:category:3",
+              "name": "ATP"
+            }
+          },
+          "qualifier": "home"
+        },
+        "awayCompetitor": {
+          "competitor": {
+            "id": "sr:competitor:66086",
+            "name": "Kicker, Nicolas",
+            "references": {
+              "betradarId": "5911965",
+              "aamsId": "66086",
+              "references": {
+                "betradar": "5911965",
+                "aams": "66086"
+              }
+            },
+            "countryCode": "ARG",
+            "country": "Argentina",
+            "abbreviation": "KIC",
+            "gender": "male",
+            "category": {
+              "id": "sr:category:3",
+              "name": "ATP"
+            }
+          },
+          "qualifier": "away"
+        }
+      }
+    },
+    "externalId": "sr:match:6037403222"
+  },
+  {
+    "metadata": {
+      "correlationId": "sr:match:60369267",
+      "provider": "BETRADAR"
+    },
+    "fixtureChange": {
+      "eventId": "sr:match:60369267",
+      "product": "1",
+      "changeId": "NotAvailable",
+      "match": {
+        "id": "sr:match:60369267",
+        "name": "Wang, Xiyu vs. Rus, Arantxa",
+        "sportId": "sr:sport:5",
+        "scheduledTime": "2025-05-06T08:00:00Z",
+        "bookingStatus": "BOOKABLE",
+        "venue": {
+          "id": "sr:venue:2356",
+          "name": "Court 1",
+          "city": "Rome",
+          "country": "Italy",
+          "countryCode": "ITA"
+        },
+        "conditions": {
+          "eventMode": "bo3"
+        },
+        "eventStatus": "NOT_STARTED",
+        "tournamentRound": {
+          "type": "qualification",
+          "name": "cupqround",
+          "betradarId": "157255",
+          "betradarName": "Rome, Italy, Qualifying"
+        },
+        "competitors": [
+          {
+            "id": "sr:competitor:262759",
+            "name": "Wang, Xiyu",
+            "references": {
+              "betradarId": "8789436",
+              "aamsId": "741507",
+              "references": {
+                "betradar": "8789436",
+                "aams": "741507"
+              }
+            },
+            "countryCode": "CHN",
+            "country": "China",
+            "abbreviation": "WAN",
+            "gender": "female",
+            "category": {
+              "id": "sr:category:6",
+              "name": "WTA"
+            }
+          },
+          {
+            "id": "sr:competitor:19847",
+            "name": "Rus, Arantxa",
+            "references": {
+              "betradarId": "1047407",
+              "aamsId": "19847",
+              "references": {
+                "betradar": "1047407",
+                "aams": "19847"
+              }
+            },
+            "countryCode": "NLD",
+            "country": "Netherlands",
+            "abbreviation": "RUS",
+            "gender": "female",
+            "category": {
+              "id": "sr:category:6",
+              "name": "WTA"
+            }
+          }
+        ],
+        "homeCompetitor": {
+          "competitor": {
+            "id": "sr:competitor:262759",
+            "name": "Wang, Xiyu",
+            "references": {
+              "betradarId": "8789436",
+              "references": {
+                "betradar": "8789436"
+              }
+            },
+            "countryCode": "CHN",
+            "country": "China",
+            "abbreviation": "WAN",
+            "gender": "female",
+            "category": {
+              "id": "sr:category:6",
+              "name": "WTA"
+            }
+          },
+          "qualifier": "home"
+        },
+        "awayCompetitor": {
+          "competitor": {
+            "id": "sr:competitor:19847",
+            "name": "Rus, Arantxa",
+            "references": {
+              "betradarId": "1047407",
+              "references": {
+                "betradar": "1047407"
+              }
+            },
+            "countryCode": "NLD",
+            "country": "Netherlands",
+            "abbreviation": "RUS",
+            "gender": "female",
+            "category": {
+              "id": "sr:category:6",
+              "name": "WTA"
+            }
+          },
+          "qualifier": "away"
+        },
+        "season": {
+          "id": "sr:season:124167",
+          "name": "WTA Rome, Italy Women Singles 2025",
+          "startDate": "2025-05-05T00:00:00Z",
+          "endDate": "2025-05-17T00:00:00Z",
+          "year": "2025",
+          "tournamentId": "sr:tournament:4775"
+        },
+        "tournament": {
+          "id": "sr:tournament:4775",
+          "name": "WTA Rome, Italy Women Singles",
+          "category": {
+            "id": "sr:category:6",
+            "name": "WTA"
+          }
+        },
+        "fixture": {
+          "startTime": "2025-05-06T08:00:00Z",
+          "isStartTimeConfirmed": true,
+          "nextLiveTime": "Tue May 06 08:00:00 UTC 2025",
+          "format": {
+            "neutralGround": true,
+            "bestOf": 3,
+            "coverageSource": "TV_COVERAGE_SOURCE",
+            "surface": "RED_CLAY"
+          },
+          "coverageInfo": {
+            "level": "silver",
+            "isLive": true,
+            "includes": [
+              "basic_score",
+              "key_events"
+            ],
+            "coveredFrom": "TV"
+          },
+          "producerInfo": {
+            "isInHostedStatistics": true,
+            "isInLiveScore": true,
+            "isInLiveMatchTracker": true,
+            "producerInfoLinks": [
+              {
+                "reference": "https://widgets.sir.sportradar.com/sportradar/en/standalone/match.lmtPlus#matchId=60369267",
+                "name": "live_match_tracker"
+              }
+            ]
+          },
+          "references": {
+            "betradarId": "148546876",
+            "references": {
+              "BetradarCtrl": "148546876"
+            }
+          }
+        }
+      }
+    },
+    "externalId": "sr:match:60369267"
+  }
+]
