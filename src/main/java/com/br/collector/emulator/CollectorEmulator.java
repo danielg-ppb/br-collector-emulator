@@ -18,11 +18,10 @@ public class CollectorEmulator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        collectorService.readUofJsonAndSend("fixtureChange.json");
-        collectorService.readUofJsonAndSend("oddChange.json");
 
-
-        collectorService.readLdJsonAndSend("ldMessage.json");
+        collectorService.sendUofMessages(collectorService.readUofJson("fixtureChange.json"));
+        collectorService.sendUofMessages(collectorService.readUofJson("oddChange.json"));
+        collectorService.sendLdMessages(collectorService.readLdJson("ldMessage.json"));
 
         System.out.println("Finished sending messages to Pulsar.");
     }

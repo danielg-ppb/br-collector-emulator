@@ -1,5 +1,6 @@
 package com.br.collector.emulator;
 
+import com.flutter.gstt.proto.Metadata;
 import com.google.protobuf.util.JsonFormat;
 import flutter.gstt.data.betradar_livedata.CollectorEnvelopeLivedataProto;
 import flutter.gstt.data.betradar_uof.CollectorEnvelopeUofProto;
@@ -12,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonFileReader {
+
+    public static final String BETRADAR_COLLECTOR_EMULATOR_PROVIDER = "betradar-collector-emulator";
 
     public static List<CollectorEnvelopeUofProto.CollectorEnvelope> processUoFJsonFileFromResources(String resourceFileName) throws Exception {
         ClassPathResource resource = new ClassPathResource(resourceFileName);
@@ -28,6 +31,11 @@ public class JsonFileReader {
             for (JsonNode node : rootNode) {
                 CollectorEnvelopeUofProto.CollectorEnvelope.Builder builder = CollectorEnvelopeUofProto.CollectorEnvelope.newBuilder();
                 JsonFormat.parser().merge(node.toString(), builder);
+                Metadata updatedMetadata = builder.getMetadata().toBuilder()
+                        .setProvider(BETRADAR_COLLECTOR_EMULATOR_PROVIDER)
+                        .build();
+
+                builder.setMetadata(updatedMetadata);
                 entities.add(builder.build());
             }
         }
@@ -50,6 +58,12 @@ public class JsonFileReader {
             for (JsonNode node : rootNode) {
                 CollectorEnvelopeLivedataProto.CollectorEnvelope.Builder builder = CollectorEnvelopeLivedataProto.CollectorEnvelope.newBuilder();
                 JsonFormat.parser().merge(node.toString(), builder);
+
+                Metadata updatedMetadata = builder.getMetadata().toBuilder()
+                        .setProvider(BETRADAR_COLLECTOR_EMULATOR_PROVIDER)
+                        .build();
+
+                builder.setMetadata(updatedMetadata);
                 entities.add(builder.build());
             }
         }

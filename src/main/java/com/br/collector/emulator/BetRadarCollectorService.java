@@ -15,26 +15,29 @@ public class BetRadarCollectorService {
         this.producer = producer;
     }
 
-    public void readUofJsonAndSend(String resourceFileName) throws Exception {
-        List<CollectorEnvelopeUofProto.CollectorEnvelope> messages = JsonFileReader.processUoFJsonFileFromResources(resourceFileName);
+    public List<CollectorEnvelopeUofProto.CollectorEnvelope> readUofJson(String resourceFileName) throws Exception {
+        return JsonFileReader.processUoFJsonFileFromResources(resourceFileName);
+    }
 
+    public void sendUofMessages(List<CollectorEnvelopeUofProto.CollectorEnvelope> messages) {
         messages.forEach(message -> {
             String messageKey = message.getExternalId();
             MessageId messageId = producer.sendUofAdapterOutboundMessage(messageKey, message);
             System.out.println("Message sent with key: " + messageKey + " and messageId: " + messageId);
         });
-
     }
 
-    public void readLdJsonAndSend(String resourceFileName) throws Exception {
-
-        List<CollectorEnvelopeLivedataProto.CollectorEnvelope> messages = JsonFileReader.processLDJsonFileFromResources(resourceFileName);
-
+    public void sendLdMessages(List<CollectorEnvelopeLivedataProto.CollectorEnvelope> messages) {
         messages.forEach(message -> {
             String messageKey = message.getExternalId();
             MessageId messageId = producer.sendLDAdapterOutboundMessage(messageKey, message);
             System.out.println("Message sent with key: " + messageKey + " and messageId: " + messageId);
         });
-
     }
+
+    public List<CollectorEnvelopeLivedataProto.CollectorEnvelope> readLdJson(String resourceFileName) throws Exception {
+        return JsonFileReader.processLDJsonFileFromResources(resourceFileName);
+    }
+
+
 }
