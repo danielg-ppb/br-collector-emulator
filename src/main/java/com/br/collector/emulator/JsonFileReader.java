@@ -14,7 +14,7 @@ import java.util.List;
 
 public class JsonFileReader {
 
-    public static final String BETRADAR_COLLECTOR_EMULATOR_PROVIDER = "betradar-collector-emulator";
+    public static final String BETRADAR_PROVIDER = "BetRadar";
 
     public static List<CollectorEnvelopeUofProto.CollectorEnvelope> processUoFJsonFileFromResources(String resourceFileName) throws Exception {
         ClassPathResource resource = new ClassPathResource(resourceFileName);
@@ -31,11 +31,15 @@ public class JsonFileReader {
             for (JsonNode node : rootNode) {
                 CollectorEnvelopeUofProto.CollectorEnvelope.Builder builder = CollectorEnvelopeUofProto.CollectorEnvelope.newBuilder();
                 JsonFormat.parser().merge(node.toString(), builder);
+
+
                 Metadata updatedMetadata = builder.getMetadata().toBuilder()
-                        .setProvider(BETRADAR_COLLECTOR_EMULATOR_PROVIDER)
+                        .setProvider(BETRADAR_PROVIDER)
+                        .setCorrelationId(builder.getMetadata().getCorrelationId() + "-emulator")
                         .build();
 
                 builder.setMetadata(updatedMetadata);
+
                 entities.add(builder.build());
             }
         }
@@ -60,7 +64,8 @@ public class JsonFileReader {
                 JsonFormat.parser().merge(node.toString(), builder);
 
                 Metadata updatedMetadata = builder.getMetadata().toBuilder()
-                        .setProvider(BETRADAR_COLLECTOR_EMULATOR_PROVIDER)
+                        .setProvider(BETRADAR_PROVIDER)
+                        .setCorrelationId(builder.getMetadata().getCorrelationId() + "-emulator")
                         .build();
 
                 builder.setMetadata(updatedMetadata);
