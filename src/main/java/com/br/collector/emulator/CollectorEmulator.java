@@ -7,8 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class CollectorEmulator implements CommandLineRunner {
+
     @Autowired
-    private CollectorService collectorService;
+    private CollectorUofService collectorUofService;
+
+    @Autowired
+    private CollectorLDService collectorldService;
+
 
     public static void main(String[] args) {
         SpringApplication.run(CollectorEmulator.class, args);
@@ -16,8 +21,10 @@ public class CollectorEmulator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        collectorService.readJsonAndSend("fixtureChange.json");
-        collectorService.readJsonAndSend("oddChange.json");
+        //collectorUofService.readJsonAndSend("fixtureChange.json");
+        //collectorUofService.readJsonAndSend("oddChange.json");
+        collectorldService.readJsonAndSend("ldMessage.json");
+
         System.out.println("Finished sending messages to Pulsar.");
     }
 

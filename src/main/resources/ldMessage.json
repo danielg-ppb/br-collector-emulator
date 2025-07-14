@@ -1,0 +1,33 @@
+[
+  {
+      "metadata": {
+        "correlationId": "Emulator",
+        "provider": "BetRadar",
+        "publishKey": "100000000"
+      },
+      "matchUpdateEntity": {
+        "id": "100000000",
+        "events": [
+          {
+            "id": "5317802971",
+            "uuid": "961f60ef-8417-4c85-8d7c-72bbf20ea907",
+            "info": "Betstart",
+            "matchScore": "0:0",
+            "setNumber": 1,
+            "setScore": "0:0",
+            "gameNumber": 1,
+            "gameScore": "0:0",
+            "serverTime": "2025-07-13T13:51:22.765Z",
+            "typeId": "1010"
+          }
+        ],
+        "matchHeader": {
+          "feedType": "DELTA",
+          "numberOfSets": 3,
+          "tieBreakLastSet": true
+        },
+        "matchStatusId": "0"
+      },
+      "externalId": "100000000"
+    }
+]
