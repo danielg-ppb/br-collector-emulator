@@ -9,10 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CollectorEmulator implements CommandLineRunner {
 
     @Autowired
-    private CollectorUofService collectorUofService;
-
-    @Autowired
-    private CollectorLDService collectorldService;
+    private BetRadarCollectorService collectorService;
 
 
     public static void main(String[] args) {
@@ -21,9 +18,11 @@ public class CollectorEmulator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //collectorUofService.readJsonAndSend("fixtureChange.json");
-        //collectorUofService.readJsonAndSend("oddChange.json");
-        collectorldService.readJsonAndSend("ldMessage.json");
+        collectorService.readUofJsonAndSend("fixtureChange.json");
+        collectorService.readUofJsonAndSend("oddChange.json");
+
+
+        collectorService.readLdJsonAndSend("ldMessage.json");
 
         System.out.println("Finished sending messages to Pulsar.");
     }

@@ -1,13 +1,13 @@
 [
   {
     "metadata": {
-      "correlationId": "sr:match:60998397",
-      "provider": "BETRADAR"
+      "correlationId": "sr:match:11968854",
+      "provider": "emulator"
     },
     "oddChange": {
-      "eventId": "sr:match:60998397",
+      "eventId": "sr:match:11968854",
       "product": "3",
-      "timestamp": "2025-06-06T10:50:00Z",
+      "timestamp": "2025-07-14T13:50:00Z",
       "status": {
         "status": "NotStarted",
         "matchStatus": "0"
@@ -18,70 +18,78 @@
             "id": "186",
             "specifiers": "{}",
             "favourite": "false",
-            "status": "1",
+            "status": "Active",
             "outcome": [
               {
                 "id": "4",
-                "odds": "1.345",
+                "odds": "1.385",
                 "active": "true",
-                "probability": 0.298945
+                "probability": 0.722759
               },
               {
                 "id": "5",
-                "odds": "2.89",
+                "odds": "3.6",
                 "active": "true",
-                "probability": 0.701055
+                "probability": 0.277235
               }
             ]
           }
         ]
       },
       "matchSummary": {
-        "id": "sr:match:60998397",
+        "id": "sr:match:11968854",
         "homeCompetitor": {
           "competitor": {
-            "id": "sr:competitor:282191",
-            "name": "Gvozdenovic, Sara",
+            "id": "sr:competitor:1270444",
+            "name": "Andreozzi G / Arends S",
             "references": {
-              "betradarId": "9051319",
-              "aamsId": "754718",
+              "betradarId": "31806852",
               "references": {
-                "betradar": "9051319",
-                "aams": "754718"
+                "betradar": "31806852"
               }
             },
-            "countryCode": "SRB",
-            "country": "Serbia",
-            "abbreviation": "GVO",
-            "gender": "female",
-            "category": {
-              "id": "sr:category:6",
-              "name": "WTA"
-            }
+            "abbreviation": "AND",
+            "players": [
+              {
+                "id": "sr:competitor:47295",
+                "name": "Andreozzi, Guido"
+              },
+              {
+                "id": "sr:competitor:66864",
+                "name": "Arends, Sander"
+              }
+            ],
+            "gender": "male"
           },
           "qualifier": "home"
         },
         "awayCompetitor": {
           "competitor": {
-            "id": "sr:competitor:1258919",
-            "name": "Warkentin, Evelyn",
+            "id": "sr:competitor:1270446",
+            "name": "Duran G / Ugo Carabelli C",
             "references": {
-              "betradarId": "31515265",
+              "betradarId": "31806854",
               "references": {
-                "betradar": "31515265"
+                "betradar": "31806854"
               }
             },
-            "abbreviation": "WAR",
-            "gender": "female",
-            "category": {
-              "id": "sr:category:2517",
-              "name": "UTR Women"
-            }
+            "abbreviation": "DUR",
+            "players": [
+              {
+                "id": "sr:competitor:204117",
+                "name": "Ugo Carabelli, Camilo"
+              },
+              {
+                "id": "sr:competitor:43319",
+                "name": "Duran, Guillermo"
+              }
+            ],
+            "gender": "male"
           },
           "qualifier": "away"
         }
       }
     },
-    "externalId": "sr:match:60998397"
+    "externalId": "sr:match:11968854"
   }
 ]
